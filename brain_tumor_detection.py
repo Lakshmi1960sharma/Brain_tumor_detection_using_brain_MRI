@@ -8,13 +8,13 @@ import numpy as np
 import cv2
 
 
-st.header("Brain Tumor Classification")
+st.header("Brain Tumor Detection")
 st.text("Upload a brain MRI Image for classifying as tumor or no-tumor")
 
 #@st.cache(allow_output_mutation=True)
 @st.cache_resource
 def load_model():
-    model = keras.models.load_model('inception_v3_model.h5')
+    model = keras.models.load_model('vgg_16_model.h5')
     return model
 
 model= load_model()
